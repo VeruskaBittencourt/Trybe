@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let tituloPrincipal=document.createElement("h1");
+      tituloPrincipal.innerHTML = "Exercicio 5.2 - JavaScript DOM"
+      document.body.appendChild(tituloPrincipal);
+      console.log(tituloPrincipal)
+
+      let primeiraDiv=document.createElement("div");
+      primeiraDiv.className = 'main-content'      
+      document.body.appendChild(primeiraDiv);
+      console.log(primeiraDiv)
+
+      let segundaDiv=document.createElement('div');
+      segundaDiv.className = 'center-content';
+      primeiraDiv.appendChild(segundaDiv);
+      console.log(segundaDiv)
+
+      let primeiroParagraf=document.createElement('p');
+      segundaDiv.appendChild(primeiroParagraf);
+      console.log(primeiroParagraf)
+
+      var terceiraDiv=document.createElement('div');
+      terceiraDiv.className = 'left-content';
+      primeiraDiv.appendChild(terceiraDiv);
+      console.log(terceiraDiv)
+
+      let ultimaDiv=document.createElement('div');
+      ultimaDiv.className='right-content';
+      primeiraDiv.appendChild(ultimaDiv);
+      console.log(ultimaDiv)
+
+      let imagemUm=document.createElement('img');
+      imagemUm.className = 'small-image';
+      imagemUm.src='https://picsum.photos/200'
+      terceiraDiv.appendChild(imagemUm);
+      console.log(imagemUm)
+
+      let lista=document.createElement('ul');
+      ultimaDiv.appendChild(lista);
+      let arrayNumbers=['Um','Dois', 'Três', 'Quatro', 'Cinco','Seis','Sete','Oito','Nove','Dez'];
+      for (let num in arrayNumbers){
+        let elementoLi=document.createElement('li');
+        elementoLi.innerHTML=arrayNumbers[num];
+        lista.appendChild(elementoLi);
+      }
+
+      for(let i=1; i<=3; i++){
+        let Titulo3=document.createElement('h3');
+        primeiraDiv.appendChild(Titulo3);
+      }
+
+      let titulo=document.getElementsByTagName('tituloPrincipal')[0];
+      titulo.className = 'title';
+
+      let Titulo3Class=document.getElementsByTagName('h3');
+      for (let i=0; i<3; i++){
+      Titulo3Class[i].className='description';
+      }
+
+
+
+    </script>
+  </body>
+</html>
