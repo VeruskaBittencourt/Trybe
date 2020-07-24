@@ -106,16 +106,26 @@
         primeiraDiv.appendChild(Titulo3);
       }
 
-      let titulo=document.getElementsByTagName('tituloPrincipal')[0];
-      titulo.className = 'title';
+      const titulo2=document.getElementsByTagName('tituloPrincipal')[0];
+      titulo2.className='title';
 
       let Titulo3Class=document.getElementsByTagName('h3');
       for (let i=0; i<3; i++){
       Titulo3Class[i].className='description';
       }
 
+      let removeDiv=document.getElementsByTagName('terceiraDiv')[0];
+      primeiraDiv.removeChild(removeDiv);
 
+      let centralizeDiv=document.getElementsByTagName('ultimaDiv')[0];
+      centralizeDiv.style.marginRight='auto';
 
+      let fundoCor=document.getElementsByTagName('center-content')[0];
+      fundoCor.style.backgroundColor = 'green';
+
+      lista.lastChild.remove();
+      lista.lastChild.remove();
+      
     </script>
   </body>
 </html>
