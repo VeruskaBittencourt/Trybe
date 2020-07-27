@@ -1,0 +1,42 @@
+
+<button id="btn" type="button">
+    Clique aqui!
+  </button>
+  <div id="div-colorida" style="border: 4px solid green;">
+    Ao clicar na caixa, o texto será alterado!
+  </div>
+  <! DOCTYPE html>
+  <html>
+   <head>
+    <meta charset = "utf-8" />
+    <title> </title>
+   </head>
+   <body>
+   
+   <h1> Frases loucas </h1>
+   
+   <ul>
+    <li> Substantivo: <input type = "text" id = "noun">
+    <li> Adjetivo: <input type = "text" id = "adjective">
+    <li> Nome de alguém: <input type = "text" id = "person">
+   </ul>
+   
+   <button id = "lib-button"> clique aqui! </button>
+    
+   <div id = "story"> </div>
+   <script>
+       function formulario(){
+           var storyDiv = document.getElementById("story");
+           var pessoa=document.getElementById("person")[value];
+           var adjetivo=document.getElementById("adjective")[value];
+           var substantivo=document.getElementById("noun")[value];
+           storyDiv.innerHTML=person + "é uma pessoa muito" + adjective + " e " + noun + ", isso é muito esquisito!";  
+       }
+       var frase=document.getElementById('lib-button');
+        frase.addEventListener('click',formulario);
+     
+   </script>
+
+    
+   </body>
+  </html>
