@@ -1,0 +1,38 @@
+/* Exercicio 14
+order:1
+
+/* Exercicio 15
+order:-1
+
+/* Exercicio 16
+align-self: flex-end
+
+/* Exercicio 17
+align-self: flex-end;
+order: 1
+
+/* Exercicio 18
+flex-wrap: wrap
+
+/* Exercicio 19
+flex-direction: column;
+flex-wrap: wrap
+
+/* Exercicio 20
+flex-flow: column wrap
+
+/* Exercicio 21
+align-content:flex-start
+
+/* Exercicio 22
+align-content: flex-end
+
+/* Exercicio 23
+flex-direction: column-reverse;
+align-content: center
+
+/* Exercicio 24
+flex-direction: column-reverse; 
+flex-wrap: wrap-reverse;
+align-content: space-between;
+justify-content: center
